@@ -56,6 +56,7 @@ char **print_updated_board_game(int line)
     char **map = malloc(sizeof(char *) * (line + 3));
     int nb_col = nb_col_in_line(line);
 
+    map[line + 2] = NULL;
     for (int i = 0; i < line + 2; i++) {
         map[i] = malloc(sizeof(char) * (nb_col + 1));
         map[i][0] = '*';
